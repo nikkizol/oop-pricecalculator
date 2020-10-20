@@ -11,13 +11,13 @@
 <form method="post">
     <label for="price"></label>
     <select name="name" id="name">
-        <?php foreach ($arrayOfCustomers as $customer):?>
-            <option value="<?php echo $customer->getId();?>"> <?php echo $customer->getfirstName();?></option>
+        <?php foreach ($customers as $customer):?>
+            <option value="<?php echo $customer->getId();?>"> <?php echo $customer->getfirstName(); echo " ", $customer->getlastName()?></option>
         <?php endforeach;?>
     </select>
     <select name="products" id="products">
-        <?php foreach ($arrayOfProducts as $product):?>
-            <option value="<?php echo $product->getPrice();?>"> <?php echo $product->getName();?></option>
+        <?php foreach ($products as $product):?>
+            <option value="<?php echo $product->getPrice();?>"> <?php echo $product->getName(); ?></option>
         <?php endforeach;?>
     </select>
     <br><br>

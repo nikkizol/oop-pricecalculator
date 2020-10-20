@@ -13,13 +13,11 @@ require_once "Model/Customer_Loader.php";
 require_once "Controller/controller.php";
 
 
-$products = new controller();
-$arrayOfProducts = $products->displayProducts();
+$getALL = new controller();
+$getALL->display();
 
-$customers = new controller();
-$arrayOfCustomers = $products->displayCustomers();
 
-require_once 'View/view.php';
+//require_once 'View/view.php';
 
 
 
