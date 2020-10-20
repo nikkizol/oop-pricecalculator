@@ -9,6 +9,7 @@ class Customer_group
     private int $fixed_discount;
     private int $variable_discount;
 
+
     /**
      * Customer_group constructor.
      * @param int $id
