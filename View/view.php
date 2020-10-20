@@ -8,16 +8,14 @@
     <title>Price Calculator</title>
 </head>
 <body>
-
-<form action="#" method="post">
+<form method="post">
     <label for="price"></label>
-    <select name="price" id="priceCal">
-        <option value="product">Product</option>
-        <option value="discount">Discount</option>
+    <select name="name" id="name">
     </select>
-    <select name="price" id="priceCal">
-        <option value="fName">First Name</option>
-        <option value="lName">Last Name</option>
+    <select name="products" id="products">
+        <?php foreach ($arrayOfProducts as $product):?>
+            <option value="<?php echo $product->getPrice();?>"> <?php echo $product->getName();?></option>
+        <?php endforeach;?>
     </select>
     <br><br>
     <input type="submit" value="Submit">
