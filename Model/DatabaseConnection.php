@@ -1,7 +1,7 @@
 <?php
 
 
-class DatabaseConection
+class DatabaseConnection
 {
     public function Connection(): PDO
     {
