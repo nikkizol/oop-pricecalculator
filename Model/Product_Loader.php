@@ -3,7 +3,7 @@
 
 class Product_Loader extends DatabaseConnection
 {
-    private array $products;
+    private array $products = [];
 
 
     public function __construct()
@@ -11,7 +11,7 @@ class Product_Loader extends DatabaseConnection
         $handle = $this->Connection()->prepare("SELECT * FROM product");
         $handle->execute();
         foreach ($handle->fetchAll() as $product) {
-            $products[] = $product['id'];
+           $this->products[$product["id"]] = new Product($product['id'],$product['name'], $product['price']);
         }
     }
 
