@@ -11,6 +11,9 @@
 <form method="post">
     <label for="price"></label>
     <select name="name" id="name">
+        <?php foreach ($arrayOfCustomers as $customer):?>
+            <option value="<?php echo $customer->getId();?>"> <?php echo $customer->getfirstName();?></option>
+        <?php endforeach;?>
     </select>
     <select name="products" id="products">
         <?php foreach ($arrayOfProducts as $product):?>
