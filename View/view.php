@@ -12,17 +12,16 @@
 <form action="#" method="post">
     <label for="price"></label>
     <select name="price" id="priceCal">
-        <option value="volvo">Product</option>
-        <option value="saab">Discount</option>
+        <option value="product">Product</option>
+        <option value="discount">Discount</option>
     </select>
     <select name="price" id="priceCal">
-        <option value="volvo">First Name</option>
-        <option value="saab">Last Name</option>
+        <option value="fName">First Name</option>
+        <option value="lName">Last Name</option>
     </select>
     <br><br>
     <input type="submit" value="Submit">
 </form>
-
 
 </body>
 </html>
