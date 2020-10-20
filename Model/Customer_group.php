@@ -5,9 +5,9 @@ class Customer_group
 {
     private int $id;
     private string $name;
-    private int $parent_id;
-    private int $fixed_discount;
-    private int $variable_discount;
+    private $parent_id;
+    private $fixed_discount;
+    private $variable_discount;
 
 
     /**
@@ -18,7 +18,7 @@ class Customer_group
      * @param int $fixed_discount
      * @param int $variable_discount
      */
-    public function __construct(int $id, string $name, int $parent_id, int $fixed_discount, int $variable_discount)
+    public function __construct(int $id, string $name, $parent_id, $fixed_discount, $variable_discount)
     {
         $this->id = $id;
         $this->name = $name;
@@ -66,9 +66,6 @@ class Customer_group
     {
         return $this->variable_discount;
     }
-
-
-
 
 
 }

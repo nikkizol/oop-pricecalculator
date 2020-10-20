@@ -10,6 +10,8 @@ require_once "Model/Product.php";
 require_once "Model/Product_Loader.php";
 require_once "Model/Customer.php";
 require_once "Model/Customer_Loader.php";
+require_once "Model/Customer_group.php";
+require_once "Model/CustomerGroup_Loader.php";
 require_once "Controller/controller.php";
 
 
@@ -17,7 +19,6 @@ $getALL = new controller();
 $getALL->display();
 
 
-//require_once 'View/view.php';
 
 
 

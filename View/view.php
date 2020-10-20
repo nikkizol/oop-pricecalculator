@@ -12,7 +12,7 @@
     <label for="price"></label>
     <select name="name" id="name">
         <?php foreach ($customers as $customer):?>
-            <option value="<?php echo $customer->getId();?>"> <?php echo $customer->getfirstName(); echo " ", $customer->getlastName()?></option>
+            <option value="<?php echo $customer->getGroupId();?>"> <?php echo $customer->getfirstName(); echo " ", $customer->getLastName()?></option>
         <?php endforeach;?>
     </select>
     <select name="products" id="products">

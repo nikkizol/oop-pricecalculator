@@ -7,8 +7,9 @@ class Customer
     private string $firstname;
     private string $lastname;
     private int $group_id;
-    private  $fixed_discount;
-    private  $variable_discount;
+    private $fixed_discount;
+    private $variable_discount;
+    private CustomerGroup_Loader $customersGroup;
 
     /**
      * Customer constructor.
@@ -19,7 +20,7 @@ class Customer
      * @param int $fixed_discount
      * @param int $variable_discount
      */
-    public function __construct(int $id, string $firstname, string $lastname, int $group_id,  $fixed_discount,  $variable_discount)
+    public function __construct(int $id, string $firstname, string $lastname, int $group_id, $fixed_discount, $variable_discount)
     {
         $this->id = $id;
         $this->firstname = $firstname;
@@ -78,6 +79,10 @@ class Customer
         return $this->variable_discount;
     }
 
+    public function totalVariableDiscount(): CustomerGroup_Loader
+    {
+        return $this->customersGroup;
 
+    }
 
 }
