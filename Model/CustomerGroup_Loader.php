@@ -11,10 +11,9 @@ class CustomerGroup_Loader extends DatabaseConnection
         $handle = $this->connection()->prepare("SELECT * FROM customer_group");
         $handle->execute();
         foreach ($handle->fetchAll() as $customerGroup) {
-            $customersGroup[] = new Customer_group($customerGroup["id"], $customerGroup["name"], $customerGroup["parent_id"], $customerGroup["fixed_discount"], $customerGroup["variable_discount"]);
+            $this->customersGroup[$customerGroup["id"]] = new Customer_group($customerGroup["id"], $customerGroup["name"], $customerGroup["parent_id"], $customerGroup["fixed_discount"], $customerGroup["variable_discount"]);
     }
     }
-
 
     /**
      * @return array

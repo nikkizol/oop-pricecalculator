@@ -23,4 +23,5 @@ class Product_Loader extends DatabaseConnection
         return $this->products;
     }
 
+
 }
