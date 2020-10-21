@@ -65,7 +65,7 @@ class Customer
     /**
      * @return int
      */
-    public function getFixedDiscount(): int
+    public function getFixedDiscount()
     {
         return $this->fixed_discount;
     }
@@ -73,7 +73,7 @@ class Customer
     /**
      * @return int
      */
-    public function getVariableDiscount(): int
+    public function getVariableDiscount()
     {
         return $this->variable_discount;
     }
