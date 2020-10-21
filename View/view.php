@@ -25,7 +25,7 @@
 
     <br><?php echo "From: ", $whyDiscount; echo " ", $varDisc; echo "%"; ?><br>
     <br><?php echo "Fixed Amount: ", $totalFixed; echo "€"; ?><br>
-    <br><?php echo "Total Price: ", number_format($theEndPrice,2);echo "€"; ?><br>
+    <br><?php echo "Total Price: ", number_format(max($theEndPrice, 0),2);echo "€"; ?><br>
 
 
     <input type="submit" value="Submit">
