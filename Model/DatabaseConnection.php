@@ -8,8 +8,8 @@ class DatabaseConnection
         // No bugs in this function, just use the right credentials.
         $dbhost = "localhost";
         $dbuser = "becode";
-        $dbpass = "becode";
-        $db = "oop_calculator";
+        $dbpass = "becode123";
+        $db = "excercise2";
 
         $driverOptions = [
             PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",
