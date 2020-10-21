@@ -25,6 +25,5 @@ class Customer_Loader extends DatabaseConnection
 
 
 }
-{
 
-}
+

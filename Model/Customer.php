@@ -9,7 +9,6 @@ class Customer
     private int $group_id;
     private $fixed_discount;
     private $variable_discount;
-    private CustomerGroup_Loader $customersGroup;
 
     /**
      * Customer constructor.
@@ -79,10 +78,5 @@ class Customer
         return $this->variable_discount;
     }
 
-    public function totalVariableDiscount(): CustomerGroup_Loader
-    {
-        return $this->customersGroup;
-
-    }
 
 }

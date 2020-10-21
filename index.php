@@ -19,6 +19,7 @@ $getALL = new controller();
 $getALL->display();
 
 
+//require_once 'View/view.php';
 
 
 
