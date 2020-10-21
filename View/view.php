@@ -18,12 +18,14 @@
         <?php endforeach; ?>
     </select>
     <select name="products" id="products">
-        <?php foreach ($products as $product): ?>
-            <option value="<?php echo $product->getPrice(); ?>"> <?php echo $product->getName(); ?></option>
+        <?php foreach ($products as $product): ?>  number_format($product->getPrice() / 100, 2)
+            <option value="<?php echo number_format($product->getPrice() / 100, 2); ?>"> <?php echo $product->getName(); echo " ", number_format($product->getPrice() / 100, 2) ; ?></option>
         <?php endforeach; ?>
     </select>
-    <br><?php echo $varDisc ?><br>
-    <br><?php echo $totalFixed ?><br>
+
+    <br><?php echo "From: ", $whyDiscount; echo " ", $varDisc; echo "%"; ?><br>
+    <br><?php echo "Fixed Amount: ", $totalFixed; echo "€"; ?><br>
+    <br><?php echo "Total Price: ", number_format(max($theEndPrice, 0),2);echo "€"; ?><br>
 
 
     <input type="submit" value="Submit">
