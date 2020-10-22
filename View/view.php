@@ -9,41 +9,31 @@
     <title>Price Calculator</title>
 </head>
 <body>
-
-
 <div class="box">
-
     <form method="post">
-        <label for="price" class="CN">Customer</label>
-        <select name="name" id="name">
-            <optgroup label="Choose a customer">
+        <div class="CL">
+            <label for="name" id="labelName">Customer</label><br>
+            <select name="name" id="name">
                 <?php foreach ($customers as $customer): ?>
                     <option value="<?php echo $customer->getGroupId(); ?>,<?php echo $customer->getFixedDiscount(); ?>,<?php echo $customer->getVariableDiscount(); ?>"> <?php echo $customer->getfirstName();
                         echo " ", $customer->getLastName() ?></option>
                 <?php endforeach; ?>
-            </optgroup>
-        </select>
-        <label for="price" class="PN">Product</label>
-        <select name="products" id="products">
-            <optgroup label="Choose a product">
-                <?php foreach ($products as $product): ?>
+            </select>
+        </div>
+        <div class="CN">
+            <label for="products" id="labelProduct">Product</label><br>
+            <select name="products" id="products">
+                <?php foreach ($products as $product): ?>  number_format($product->getPrice() / 100, 2)
                     <option value="<?php echo number_format($product->getPrice() / 100, 2); ?>"> <?php echo $product->getName();
                         echo " ", number_format($product->getPrice() / 100, 2); ?></option>
                 <?php endforeach; ?>
-            </optgroup>
-        </select>
-
+            </select>
+        </div>
         <?php echo "<br>From: {$whyDiscount} {$varDisc}%<br>"; ?>
         <?php echo "<br>Fixed Amount: {$totalFixed}€<br>"; ?>
         <?php echo "<br>Total Price: {$theEndPrice}€<br>"; ?>
-
-
         <button class="Button">Submit</button>
-
-        <!-- <input type="submit" value="Submit">-->
-
     </form>
 </div>
-
 </body>
 </html>
