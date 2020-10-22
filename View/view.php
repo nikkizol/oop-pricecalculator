@@ -16,17 +16,21 @@
     <form method="post">
         <label for="price" class="CN">Customer</label>
         <select name="name" id="name">
-            <?php foreach ($customers as $customer): ?>
-                <option value="<?php echo $customer->getGroupId(); ?>,<?php echo $customer->getFixedDiscount(); ?>,<?php echo $customer->getVariableDiscount(); ?>"> <?php echo $customer->getfirstName();
-                    echo " ", $customer->getLastName() ?></option>
-            <?php endforeach; ?>
+            <optgroup label="Choose a customer">
+                <?php foreach ($customers as $customer): ?>
+                    <option value="<?php echo $customer->getGroupId(); ?>,<?php echo $customer->getFixedDiscount(); ?>,<?php echo $customer->getVariableDiscount(); ?>"> <?php echo $customer->getfirstName();
+                        echo " ", $customer->getLastName() ?></option>
+                <?php endforeach; ?>
+            </optgroup>
         </select>
         <label for="price" class="PN">Product</label>
         <select name="products" id="products">
-            <?php foreach ($products as $product): ?>
-                <option value="<?php echo number_format($product->getPrice() / 100, 2); ?>"> <?php echo $product->getName();
-                    echo " ", number_format($product->getPrice() / 100, 2); ?></option>
-            <?php endforeach; ?>
+            <optgroup label="Choose a product">
+                <?php foreach ($products as $product): ?>
+                    <option value="<?php echo number_format($product->getPrice() / 100, 2); ?>"> <?php echo $product->getName();
+                        echo " ", number_format($product->getPrice() / 100, 2); ?></option>
+                <?php endforeach; ?>
+            </optgroup>
         </select>
 
         <?php echo "<br>From: {$whyDiscount} {$varDisc}%<br>"; ?>
