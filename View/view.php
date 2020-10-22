@@ -37,8 +37,10 @@
         <br><?php echo "Total Price: ", number_format(max($theEndPrice, 0), 2);
         echo "€"; ?><br>
 
+        <button class="Button">Submit</button>
 
-        <input type="submit" value="Submit">
+       <!-- <input type="submit" value="Submit">-->
+
     </form>
 </div>
 
