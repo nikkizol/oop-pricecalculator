@@ -139,7 +139,7 @@ class controller
         }
 
 
-        require_once 'View/view.php';
+        require 'View/view.php';
     }
 
 }

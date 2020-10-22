@@ -1,3 +1,6 @@
+<?php
+require_once "Controller/controller.php";
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,7 +28,7 @@
             <select name="products" id="products">
                 <?php foreach ($products as $product): ?>  number_format($product->getPrice() / 100, 2)
                     <option value="<?php echo number_format($product->getPrice() / 100, 2); ?>"> <?php echo $product->getName();
-                        echo " ", number_format($product->getPrice() / 100, 2); ?></option>
+                        echo ": ", number_format($product->getPrice() / 100, 2); ?>€</option>
                 <?php endforeach; ?>
             </select>
         </div>
