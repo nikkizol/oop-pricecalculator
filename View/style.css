@@ -87,5 +87,12 @@ select#products{
 .footer{
     text-align: center;
     margin-top: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: royalblue;
+    color: white;
+    text-align: center;
 }
 
