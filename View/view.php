@@ -14,7 +14,7 @@
 <div class="box">
 
     <form method="post">
-        <label for="price"></label>
+        <label for="price" class="CN">Customer</label>
         <select name="name" id="name">
 
             <?php foreach ($customers as $customer): ?>
@@ -22,6 +22,7 @@
                     echo " ", $customer->getLastName() ?></option>
             <?php endforeach; ?>
         </select>
+        <label for="price" class="PN">Product</label>
         <select name="products" id="products">
             <?php foreach ($products as $product): ?>  number_format($product->getPrice() / 100, 2)
                 <option value="<?php echo number_format($product->getPrice() / 100, 2); ?>"> <?php echo $product->getName();

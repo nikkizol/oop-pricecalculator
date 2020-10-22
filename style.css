@@ -2,8 +2,8 @@
 .box{
     background-color: orange;
     color: white;
-    height: 250px;
-    width: 550px;
+    height: 350px;
+    width: 650px;
     border: 15px solid black;
     text-align: center;
     margin: auto;
@@ -22,7 +22,7 @@ input{
 }
 
 .Button{
-    margin: 15px 9px;
+    margin: 90px 9px;
     cursor: pointer;
     background-color: #4CAF50;
     border: none;
@@ -39,6 +39,22 @@ input{
     background-color: white;
     color: black;
     border: 2px solid #4CAF50;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 25px;
 }
 
+.CN{
+    position: relative;
+    bottom: 20px;
+    padding-left: 10px;
+    vertical-align: central;
 
+}
+
+select#name{
+
+}
+
+select#products{
+
+}
