@@ -22,7 +22,7 @@ input{
 }
 
 .Button{
-    margin: 90px 9px;
+    margin: 40px 9px;
     cursor: pointer;
     background-color: #4CAF50;
     border: none;
@@ -42,19 +42,46 @@ input{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     border-radius: 25px;
 }
-
+/*
 .CN{
     position: relative;
     bottom: 20px;
     padding-left: 10px;
     vertical-align: central;
 
+
+}
+
+.PN{
+    position: relative;
+    bottom: 20px;
+    padding-left: 10px;
+    vertical-align: central;
 }
 
 select#name{
+    display: flex;
+
 
 }
 
 select#products{
+    margin-left: -90px;
+}
+
+ */
+
+.CN{
+    width: 50%;
+    float: left;
+    margin-top: 40px;
 
 }
+
+.CL{
+    width: 50%;
+    float: left;
+    margin-top: 40px;
+}
+
+
