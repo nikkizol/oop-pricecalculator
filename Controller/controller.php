@@ -135,6 +135,7 @@ class controller
             if ($varDisc !== 0) {
                 $procentage = $theEndPrice * $varDisc * 0.01;
                 $theEndPrice = $theEndPrice - $procentage;
+                $theEndPrice = number_format(max($theEndPrice, 0), 2);
             }
         }
 
