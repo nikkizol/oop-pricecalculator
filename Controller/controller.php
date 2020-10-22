@@ -11,6 +11,7 @@ class controller
         $getCustomers = new Customer_Loader();
         $customers = $getCustomers->getCustomers();
 
+
         $getCustomerGroup = new CustomerGroup_Loader();
         $customersGroup = $getCustomerGroup->getCustomerGroup();
 
