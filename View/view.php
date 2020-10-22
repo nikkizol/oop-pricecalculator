@@ -45,11 +45,14 @@
         echo "€"; ?><br>
 
         <button class="Button">Submit</button>
-
-        <!-- <input type="submit" value="Submit">-->
-
     </form>
 </div>
+
+<footer class="footer">
+    &copy; NIKITA & DWAYNE  <?php echo date('Y')?>
+</footer>
+</body>
+</html>
 
 </body>
 </html>
