@@ -1,0 +1,19 @@
+
+.box{
+    background-color: orange;
+    color: red;
+    height: 250px;
+    width: 550px;
+    border: 10px solid black;
+    text-align: center;
+    margin: auto;
+}
+
+select{
+ margin: 20px;
+}
+
+input{
+    margin: 25px;
+}
+
