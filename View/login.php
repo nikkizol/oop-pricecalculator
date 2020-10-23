@@ -22,5 +22,8 @@
         <input type="submit" value="Log in" class="btn">
     </form>
 </div>
+<footer class="footer">
+    &copy; NIKITA & DWAYNE  <?php echo date('Y')?>
+</footer>
 </body>
 </html>
