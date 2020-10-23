@@ -13,8 +13,10 @@ require_once "Model/Customer_Loader.php";
 require_once "Model/Customer_group.php";
 require_once "Model/CustomerGroup_Loader.php";
 require_once "Controller/controller.php";
+require_once "Controller/loginController.php";
 
-
+$getLogin = new LoginController();
+$getLogin->displayLogin();
 $getALL = new controller();
 $getALL->display();
 

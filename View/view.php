@@ -1,6 +1,3 @@
-<?php
-require_once "Controller/controller.php";
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,25 +10,19 @@ require_once "Controller/controller.php";
 </head>
 <body>
 <div class="box">
+    <h3>Hi <?php echo $customerFirstName;?></h3>
     <form method="post">
-        <div class="CL">
-            <label for="name" id="labelName">Customer</label><br>
-            <select name="name" id="name">
-                <?php foreach ($customers as $customer): ?>
-                    <option value="<?php echo $customer->getGroupId(); ?>,<?php echo $customer->getFixedDiscount(); ?>,<?php echo $customer->getVariableDiscount(); ?>"> <?php echo $customer->getfirstName();
-                        echo " ", $customer->getLastName() ?></option>
-                <?php endforeach; ?>
-            </select>
-        </div>
         <div class="CN">
             <label for="products" id="labelProduct">Product</label><br>
             <select name="products" id="products">
-                <?php foreach ($products as $product): ?>  number_format($product->getPrice() / 100, 2)
-                    <option value="<?php echo number_format($product->getPrice() / 100, 2); ?>"> <?php echo $product->getName();
-                        echo ": ", number_format($product->getPrice() / 100, 2); ?>€</option>
+                <?php foreach ($products as $product): ?>
+                    <option value="<?php echo number_format($product->getPrice() / 100, 2);?>,<?php echo $product->getName();?>"> <?php echo $product->getName();
+                        echo ": ", number_format($product->getPrice() / 100, 2); ?>€
+                    </option>
                 <?php endforeach; ?>
             </select>
         </div>
+        <br>Product: <?php echo ucfirst($getName); echo ": ", $getPrice;?>€<br>
         <?php echo "<br>From: {$whyDiscount} {$varDisc}%<br>"; ?>
         <?php echo "<br>Fixed Amount: {$totalFixed}€<br>"; ?>
         <?php echo "<br>Total Price: {$theEndPrice}€<br>"; ?>
