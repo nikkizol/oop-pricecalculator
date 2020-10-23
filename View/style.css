@@ -42,34 +42,6 @@ input{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     border-radius: 25px;
 }
-/*
-.CN{
-    position: relative;
-    bottom: 20px;
-    padding-left: 10px;
-    vertical-align: central;
-
-
-}
-
-.PN{
-    position: relative;
-    bottom: 20px;
-    padding-left: 10px;
-    vertical-align: central;
-}
-
-select#name{
-    display: flex;
-
-
-}
-
-select#products{
-    margin-left: -90px;
-}
-
- */
 
 .CN{
     width: 50%;
@@ -84,4 +56,21 @@ select#products{
     margin-top: 40px;
 }
 
+.footer{
+    text-align: center;
+    margin-top: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+}
 
+#labelName{
+    color: red;
+}
+#labelProduct{
+    color: red;
+}

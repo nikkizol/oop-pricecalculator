@@ -29,5 +29,14 @@
         <button class="Button">Submit</button>
     </form>
 </div>
+
+
+<footer class="footer">
+    &copy; NIKITA & DWAYNE  <?php echo date('Y')?>
+</footer>
+</body>
+</html>
+
+
 </body>
 </html>
