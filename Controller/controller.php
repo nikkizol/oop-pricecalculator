@@ -58,16 +58,10 @@ class controller
                 $getPrice = $result[0];
                 $getName = $result[1];
 
-
                 // GET THE BIGGEST VAR DISCOUNT IN GROUP
 
                 $obj = searchGroupsArray($customersGroup, $groupId);
-                if ($obj->getVariableDiscount() == null) {
-                    do {
-                        $obj = searchGroupsArray($customersGroup, $obj->getParentId());
-                        array_push($arrVarDisc, $obj);
-                    } while ($obj->getParentId() !== null);
-                } elseif ($obj->getVariableDiscount() !== null) {
+                if (isset($obj)) {
                     array_push($arrVarDisc, $obj);
                     do {
                         $obj = searchGroupsArray($customersGroup, $obj->getParentId());
@@ -81,13 +75,7 @@ class controller
                 // CALCULATE FIXED AMOUNT IN GROUP
 
                 $obj = searchGroupsArray($customersGroup, $groupId);
-                if ($obj->getFixedDiscount() == null) {
-                    do {
-                        $obj = searchGroupsArray($customersGroup, $obj->getParentId());
-                        array_push($arrFixDisc, $obj->getFixedDiscount());
-                    } while ($obj->getParentId() !== null);
-                } elseif ($obj->getFixedDiscount() !== null) {
-                    array_push($arrFixDisc, $obj->getFixedDiscount());
+                if (isset($obj)) {
                     do {
                         $obj = searchGroupsArray($customersGroup, $obj->getParentId());
                         array_push($arrFixDisc, $obj->getFixedDiscount());
@@ -96,7 +84,8 @@ class controller
                 $countedFixDiscFromGroup = array_sum($arrFixDisc);
 
 
-                // CHOOSE BETTER DISCOUNT FROM GROUP
+
+                // CHOOSE BETTER DISCOUNT FROM THE GROUP VAR or FIXED
 
                 $resultFix = 0;
                 $resultVar = 0;
